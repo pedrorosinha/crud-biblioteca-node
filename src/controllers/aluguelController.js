@@ -1,4 +1,4 @@
-import { aluguel } from '../models/Aluguel.js';
+import aluguel from '../models/Aluguel.js';
 
 class AluguelController {
 

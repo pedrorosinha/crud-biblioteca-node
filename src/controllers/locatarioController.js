@@ -1,4 +1,4 @@
-import { locatario } from '../models/Locatario.js';
+import locatario from '../models/Locatario.js';
 
 class LocatarioController {
 

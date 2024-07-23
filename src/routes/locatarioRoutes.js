@@ -4,9 +4,9 @@ import LocatarioController from "../controllers/locatarioController.js";
 const routes = express.Router();
 
 routes.get('/', LocatarioController.listarLocatarios);
-routes.get('/locatarios/:id', LocatarioController.listarLocatarioPorId);
-routes.post('/locatarios', LocatarioController.cadastrarLocatario);
-routes.put('/locatarios/:id', LocatarioController.atualizarLocatario);
-routes.delete('/locatarios/:id', LocatarioController.excluirLocatario);
+routes.get('/:id', LocatarioController.listarLocatarioPorId);
+routes.post('/', LocatarioController.cadastrarLocatario);
+routes.put('/:id', LocatarioController.atualizarLocatario);
+routes.delete('/:id', LocatarioController.excluirLocatario);
 
 export default routes;

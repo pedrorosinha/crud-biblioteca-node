@@ -1,16 +1,16 @@
 import express from "express";
 import request from "supertest";
-import autorRoutes from "../../src/routes/autorRoutes";
+import livroRoutes from "../../src/routes/livroRoutes";
 
 const app = express();
 app.use(express.json());
-app.use('/autores', autorRoutes);
+app.use('/livros', livroRoutes);
 
-describe('Testes Autor', () => {
+describe('Testes Livro', () => {
    it('Testes jest', async () => {
 
-      const response = await request(app).get('/autores');
-      console.log(response.body);
+      const response = await request(app).get('/livros');
+      console.log(response);
       expect(response.status).toBe(200);
       // expect(response.body.autor.nome).toBe(newAutor.nome);
       // expect(response.body.autor.anoNascimento).toBe(newAutor.anoNascimento);

@@ -1,12 +1,12 @@
 import express from "express";
 import LocatarioController from "../controllers/locatarioController.js";
 
-const routes = express.Router();
+const locatarioRoutes = express.Router();
 
-routes.get('/', LocatarioController.listarLocatarios);
-routes.get('/:id', LocatarioController.listarLocatarioPorId);
-routes.post('/', LocatarioController.cadastrarLocatario);
-routes.put('/:id', LocatarioController.atualizarLocatario);
-routes.delete('/:id', LocatarioController.excluirLocatario);
+locatarioRoutes.get('/', LocatarioController.listarLocatarios);
+locatarioRoutes.get('/:id', LocatarioController.listarLocatarioPorId);
+locatarioRoutes.post('/', LocatarioController.cadastrarLocatario);
+locatarioRoutes.put('/:id', LocatarioController.atualizarLocatario);
+locatarioRoutes.delete('/:id', LocatarioController.excluirLocatario);
 
-export default routes;
+export default locatarioRoutes;

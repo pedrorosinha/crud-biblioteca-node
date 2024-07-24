@@ -1,6 +1,6 @@
 import express from "express";
 import request from "supertest";
-import autorRoutes from "../../routes/autorRoutes";
+import autorRoutes from "../src/routes/autorRoutes";
 const app = express();
 app.use(express.json());
 app.use('/autores', autorRoutes);

@@ -32,7 +32,7 @@ const config = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: "babel",
 
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
@@ -154,7 +154,8 @@ const config = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "<rootDir>/tests/**/*.test.js"
+    "<rootDir>/tests/**/*.spec.js"
+    // C:\Users\pedro.rosinha\OneDrive - DBserver Assessoria em Sistemas de Informação Ltda\Documentos\crud-biblioteca-node\tests
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
@@ -172,7 +173,9 @@ const config = {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
+  transform: {
+    '^.+\\.(js|jsx)$': 'babel-jest'
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

@@ -1,12 +1,12 @@
 import express from "express";
 import AluguelController from "../controllers/aluguelController.js";
 
-const routes = express.Router();
+const aluguelRoutes = express.Router();
 
-routes.get('/', AluguelController.listarAlugueis);
-routes.get('/:id', AluguelController.listarAluguelPorId);
-routes.post('/', AluguelController.cadastrarAluguel);
-routes.put('/:id', AluguelController.atualizarAluguel);
-routes.delete('/:id', AluguelController.excluirAluguel);
+aluguelRoutes.get('/', AluguelController.listarAlugueis);
+aluguelRoutes.get('/:id', AluguelController.listarAluguelPorId);
+aluguelRoutes.post('/', AluguelController.cadastrarAluguel);
+aluguelRoutes.put('/:id', AluguelController.atualizarAluguel);
+aluguelRoutes.delete('/:id', AluguelController.excluirAluguel);
 
-export default routes;
+export default aluguelRoutes;
